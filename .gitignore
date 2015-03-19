@@ -1,12 +1,40 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+#ant stuff
+/bin/
+/download/
+#Remove OS generated garbage
+*/.DS_Store
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+#gradle stuff
+/.gradle
+/build/
+/run*/
+/ui/
+gradle-app.setting
+#IDEA files from Gradle
+.idea/
+/*.iml
+/*.ipr
+/*.iws
+#Vim backups
+*~
+#manual version override
+version.properties
+#eclipse stuffs
+/.classpath
+/.project
+/.settings/
+/eclipse/
+/debug/
+*.lock
+/.metadata/
+/config/
+/logs/
+options.txt
+/saves/
+/out
