@@ -58,6 +58,9 @@ public class BlockCrusherPart extends BlockContainer {
         setCreativeTab(CreativeTabs.tabBlock);
     }
 
+    /**
+     * Icon for each side of block
+     */
     public IIcon getIcon(IBlockAccess blockAccess, int x, int y, int z, int side) {
         IIcon icon = null;
         int metadata = blockAccess.getBlockMetadata(x,y,z);
@@ -71,6 +74,11 @@ public class BlockCrusherPart extends BlockContainer {
         return icon != null ? icon : getIcon(side, metadata);
     }
 
+    
+    /**
+     * Helper to get casing item
+     * @return casing item
+     */
     public ItemStack getCrusherCasingItemStack() {
         return new ItemStack(this, 1, METADATA_CASING);
     }
@@ -108,6 +116,10 @@ public class BlockCrusherPart extends BlockContainer {
     private static final int NORTHSOUTH = 4;
     private static final int VERTICAL = 5;
 
+    
+    /**
+     * Get icon for casing
+     */
     private IIcon getCasingIcon(IBlockAccess blockAccess, int x, int y, int z, int side) {
         TileEntity te = blockAccess.getTileEntity(x, y, z);
         if(te instanceof TileEntityCrusherPart) {
