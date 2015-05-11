@@ -9,7 +9,7 @@ import com.julianscode.hexcore.multiblock.rectangular.RectangularMultiblockTileE
 /**
  * Created by jmeyer2k on 3/18/15.
  */
-public class TileEntityCrusherPartBase extends RectangularMultiblockTileEntityBase {
+public class TileEntityBigMachinePartBase extends RectangularMultiblockTileEntityBase {
     @Override
     public void onMachineAssembled(MultiblockControllerBase multiblockControllerBase) {
 
@@ -57,7 +57,7 @@ public class TileEntityCrusherPartBase extends RectangularMultiblockTileEntityBa
 
     @Override
     public Class<? extends MultiblockControllerBase> getMultiblockControllerType() {
-        return TileEntityCrusherController.class;
+        return TileEntityBigMachineController.class;
     }
 
     @Override

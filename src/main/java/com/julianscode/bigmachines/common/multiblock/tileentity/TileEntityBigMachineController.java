@@ -10,9 +10,9 @@ import net.minecraft.world.World;
 /**
  * Created by jmeyer2k on 3/18/15.
  */
-public class TileEntityCrusherController extends RectangularMultiblockControllerBase {
+public class TileEntityBigMachineController extends RectangularMultiblockControllerBase {
 
-    public TileEntityCrusherController(World world) {
+    public TileEntityBigMachineController(World world) {
         super(world);
     }
 

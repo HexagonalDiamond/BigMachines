@@ -1,7 +1,7 @@
 package com.julianscode.bigmachines.common;
 
-import com.julianscode.bigmachines.common.multiblock.block.BlockCrusherPart;
-import com.julianscode.bigmachines.common.multiblock.item.ItemBlockCrusher;
+import com.julianscode.bigmachines.common.multiblock.block.BlockBigMachinePart;
+import com.julianscode.bigmachines.common.multiblock.item.ItemBlockBigMachinePart;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,7 +23,7 @@ public class BigMachines
 
     public static final String TEXTURE_NAME_PREFIX = "bigmachines:";
 
-    public static BlockCrusherPart blockCrusherPart;
+    public static BlockBigMachinePart blockCrusherPart;
     /**
      * Initialization Event for BigMachines
      * @param event initialization parameters
@@ -49,8 +49,8 @@ public class BigMachines
      */
     public static void registerCrusherPartBlocks() {
         if(BigMachines.blockCrusherPart == null) {
-            BigMachines.blockCrusherPart = new BlockCrusherPart(Material.iron);
-            GameRegistry.registerBlock(BigMachines.blockCrusherPart, ItemBlockCrusher.class, "BRReactorPart");
+            BigMachines.blockCrusherPart = new BlockBigMachinePart(Material.iron);
+            GameRegistry.registerBlock(BigMachines.blockCrusherPart, ItemBlockBigMachinePart.class, "BRReactorPart");
 
             OreDictionary.registerOre("crusherCasing", BigMachines.blockCrusherPart.getCrusherCasingItemStack());
         }

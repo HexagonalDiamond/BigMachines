@@ -1,8 +1,8 @@
 package com.julianscode.bigmachines.common.multiblock.block;
 
 import com.julianscode.bigmachines.common.BigMachines;
-import com.julianscode.bigmachines.common.multiblock.tileentity.TileEntityCrusherPart;
-import com.julianscode.bigmachines.common.multiblock.tileentity.TileEntityCrusherPartBase;
+import com.julianscode.bigmachines.common.multiblock.tileentity.TileEntityBigMachinePart;
+import com.julianscode.bigmachines.common.multiblock.tileentity.TileEntityBigMachinePartBase;
 import com.julianscode.hexcore.multiblock.rectangular.PartPosition;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,9 +17,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Any part of a BigCrusher.
+ * Any part of a BigMachine.
  */
-public class BlockCrusherPart extends BlockContainer {
+public class BlockBigMachinePart extends BlockContainer {
 
 
     // Metadata for all of the different crusher blocks
@@ -49,7 +49,7 @@ public class BlockCrusherPart extends BlockContainer {
      */
     private IIcon[][] _icons = new IIcon[_states.length][];
 
-    public BlockCrusherPart(Material material) {
+    public BlockBigMachinePart(Material material) {
         super(material);
         setStepSound(soundTypeMetal);
         setHardness(2.0f);
@@ -87,7 +87,7 @@ public class BlockCrusherPart extends BlockContainer {
     public TileEntity createNewTileEntity(World world, int metadata) {
         switch(metadata) {
             default:
-                return new TileEntityCrusherPart();
+                return new TileEntityBigMachinePart();
         }
     }
 
@@ -122,8 +122,8 @@ public class BlockCrusherPart extends BlockContainer {
      */
     private IIcon getCasingIcon(IBlockAccess blockAccess, int x, int y, int z, int side) {
         TileEntity te = blockAccess.getTileEntity(x, y, z);
-        if(te instanceof TileEntityCrusherPart) {
-            TileEntityCrusherPart part = (TileEntityCrusherPart)te;
+        if(te instanceof TileEntityBigMachinePart) {
+            TileEntityBigMachinePart part = (TileEntityBigMachinePart)te;
             PartPosition position = part.getPartPosition();
 //            Multiblock reactor = part.getReactorController();
                 return _icons[METADATA_CASING][DEFAULT];

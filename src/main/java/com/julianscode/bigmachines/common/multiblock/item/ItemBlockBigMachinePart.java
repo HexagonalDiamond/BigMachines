@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockCrusher extends ItemBlock {
+public class ItemBlockBigMachinePart extends ItemBlock {
 
-    public ItemBlockCrusher(Block block) {
+    public ItemBlockBigMachinePart(Block block) {
         super(block);
         setHasSubtypes(true);
     }

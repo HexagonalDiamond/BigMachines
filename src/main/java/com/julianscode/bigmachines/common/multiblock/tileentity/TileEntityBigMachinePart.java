@@ -5,8 +5,8 @@ import com.julianscode.hexcore.multiblock.MultiblockValidationException;
 /**
  * Reactor casing TE.
  */
-public class TileEntityCrusherPart extends TileEntityCrusherPartBase {
-    public TileEntityCrusherPart() {
+public class TileEntityBigMachinePart extends TileEntityBigMachinePartBase {
+    public TileEntityBigMachinePart() {
         super();
     }
 
